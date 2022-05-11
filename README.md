@@ -13,6 +13,13 @@ docker run -d --init \
 quay.io/team-helium/miner:miner-arm64_2022.05.10.0_GA
 ```
 
-
 ### Helpful-ish links
 https://docs.helium.com/mine-hnt/full-hotspots/become-a-maker/basic-miner-operation/
+
+### Dragino first run scripts
+`/usr/lib/dragino`
+`/usr/local/dragino`
+
+
+Scared to do it, but here it is..
+https://wiki.dragino.com/index.php?title=Reset_Factory_Default
