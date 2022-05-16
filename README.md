@@ -29,9 +29,37 @@ Dragino update script: `/usr/local/bin`
 Scared to do it, but here it is..
 https://wiki.dragino.com/index.php?title=Reset_Factory_Default
 
-
+```
 . /etc/dragino-release
 . /etc/os-release
 . /lib/init/vars.sh
 . /lib/lsb/init-functions
 . /usr/lib/dragino/dragino-common
+```
+
+
+trying to get it to connect to wifi.. woof..
+Answer: `/etc/hostapd/hostapd.conf` ffs
+
+https://forum.openwrt.org/t/static-wifi-configuration-with-wrong-password-is-still-detected-as-active/112966
+Something is repeatedly overwriting config at:
+`/etc/config/wireless`
+
+`/etc/hostapd/hostapd.conf`
+`nmcli con add con-name`?
+`iw reg set "$FR_net_wifi_countrycode"`?
+`/boot/dragino_first_run.txt`
+
+I think the doing is here.. 
+`/etc/init.d/iot`
+```
+ if [[ "$mode" = "lorawan" ]]; then
+                systemctl start draginofwd
+        elif [[ "$mode" = "station" ]]; then
+                systemctl start draginostation
+        elif [[ "$mode" = "lorawan" ]] && [[ "$provide" = "helium" ]]; then
+                systemctl start draginofwd
+                systemctl srart helium_gateway
+```
+so...
+`uci set gateway.general.server_type=station`?
