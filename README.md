@@ -39,7 +39,6 @@ https://wiki.dragino.com/index.php?title=Reset_Factory_Default
 
 
 trying to get it to connect to wifi.. woof..
-Answer: `/etc/hostapd/hostapd.conf` ffs
 
 https://forum.openwrt.org/t/static-wifi-configuration-with-wrong-password-is-still-detected-as-active/112966
 Something is repeatedly overwriting config at:
@@ -63,3 +62,16 @@ I think the doing is here..
 ```
 so...
 `uci set gateway.general.server_type=station`?
+
+Host apd getting in the way.. dumped it.. 
+`apt-get remove hostadp`?
+
+I'll do it the hard way.. script..
+```cp /etc/dhcpcd.conf.bak /etc/dhcpcd.conf #strips static ip
+iwconfig wlan0 mode managed
+sudo wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
+iw wlan0 connect <SSID>
+iw wlan0 link
+ip link set wlan0 down
+ip link set wlan0 up```
+
