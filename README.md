@@ -1,7 +1,8 @@
 # helium-dragino-hp0d-fun
 
 ### Update to newest miner..
-```docker stop miner && docker rm miner
+```
+docker stop miner && docker rm miner
 docker run -d --init \
 --ulimit nofile=64000:64000 \
 --env REGION_OVERRIDE=US915 \
@@ -10,7 +11,7 @@ docker run -d --init \
 --publish 44158:44158/tcp \
 --name miner \
 --mount type=bind,source=/home/miner/miner_data,target=/var/data \
-quay.io/team-helium/miner:miner-arm64_2022.05.10.0_GA
+quay.io/team-helium/miner:miner-arm64_2022.05.13.0_GA
 ```
 
 ### Helpful-ish links
