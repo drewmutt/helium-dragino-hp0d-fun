@@ -13,6 +13,8 @@ docker run -d --init \
 --mount type=bind,source=/home/miner/miner_data,target=/var/data \
 quay.io/team-helium/miner:miner-arm64_2022.05.13.0_GA
 ```
+Newest ver: https://quay.io/repository/team-helium/miner?tab=tags
+
 
 ### Helpful-ish links
 https://docs.helium.com/mine-hnt/full-hotspots/become-a-maker/basic-miner-operation/
