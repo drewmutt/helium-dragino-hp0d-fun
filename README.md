@@ -36,6 +36,10 @@ https://wiki.dragino.com/index.php?title=Reset_Factory_Default
 . /lib/lsb/init-functions
 . /usr/lib/dragino/dragino-common
 ```
+### Wifi
+After messing for days, asked Dragino, they replied promptly, but with a rando IP address wiki..
+`http://8.211.40.43:8080/xwiki/bin/view/Main/User%20Manual%20for%20All%20Gateway%20models/HP0D/`
+uploaded PDF here
 
 
 trying to get it to connect to wifi.. woof..
