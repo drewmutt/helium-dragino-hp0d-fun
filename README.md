@@ -11,8 +11,7 @@ docker run -d --init \
 --publish 44158:44158/tcp \
 --name miner \
 --mount type=bind,source=/home/miner/miner_data,target=/var/data \
---mount type=bind,source=/home/ubuntu/overlay/docker.config,target=/opt/miner/releases/0.1.0/sys.config \
-quay.io/team-helium/miner:miner-arm64_2022.05.13.0_GA
+quay.io/team-helium/miner:miner-arm64_2022.05.19.0_GA
 ```
 Newest ver: https://quay.io/repository/team-helium/miner?tab=tags
 
