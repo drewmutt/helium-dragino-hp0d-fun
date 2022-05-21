@@ -13,6 +13,10 @@ docker run -d --init \
 --mount type=bind,source=/home/miner/miner_data,target=/var/data \
 quay.io/team-helium/miner:miner-arm64_2022.05.19.0_GA
 ```
+
+!MUST DO! Update: `nano /usr/local/bin/minerup`
+
+
 Newest ver: https://quay.io/repository/team-helium/miner?tab=tags
 
 
