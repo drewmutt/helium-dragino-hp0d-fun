@@ -1,7 +1,7 @@
 # helium-dragino-hp0d-fun
 
 ### Update to newest miner..
-```
+~~~```
 docker stop miner && docker rm miner
 docker run -d --init \
 --ulimit nofile=64000:64000 \
@@ -12,9 +12,11 @@ docker run -d --init \
 --name miner \
 --mount type=bind,source=/home/miner/miner_data,target=/var/data \
 quay.io/team-helium/miner:miner-arm64_2022.05.19.0_GA
-```
+```~~~
 
-!MUST DO! Update: `nano /usr/local/bin/minerup`
+!MUST DO!
+This script does a lot of rough handling with wiping stuff..
+Update: `nano /usr/local/bin/minerup`
 
 
 Newest ver: https://quay.io/repository/team-helium/miner?tab=tags
