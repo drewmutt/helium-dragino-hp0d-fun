@@ -2,10 +2,11 @@
 
 ### Update to newest miner..
 
+### So.. problem was the SD card was junk, wasn't saving files. Cloned to a new one, all good-ish.
+The rest of this is for posterity..
 
-!MUST DO!
+
 This script does a lot of rough handling with wiping stuff..
-
 Update: `nano /usr/local/bin/minerup`....
 
 ```
