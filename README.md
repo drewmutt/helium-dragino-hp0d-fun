@@ -1,18 +1,7 @@
 # helium-dragino-hp0d-fun
 
 ### Update to newest miner..
-~~~```
-docker stop miner && docker rm miner
-docker run -d --init \
---ulimit nofile=64000:64000 \
---env REGION_OVERRIDE=US915 \
---restart always \
---publish 1680:1680/udp \
---publish 44158:44158/tcp \
---name miner \
---mount type=bind,source=/home/miner/miner_data,target=/var/data \
-quay.io/team-helium/miner:miner-arm64_2022.05.19.0_GA
-```~~~
+
 
 !MUST DO!
 This script does a lot of rough handling with wiping stuff..
@@ -101,3 +90,17 @@ iw wlan0 link
 
 Edited
 `etc/config/miner` to new version
+
+Nah, ignore this..
+```
+docker stop miner && docker rm miner
+docker run -d --init \
+--ulimit nofile=64000:64000 \
+--env REGION_OVERRIDE=US915 \
+--restart always \
+--publish 1680:1680/udp \
+--publish 44158:44158/tcp \
+--name miner \
+--mount type=bind,source=/home/miner/miner_data,target=/var/data \
+quay.io/team-helium/miner:miner-arm64_2022.05.19.0_GA
+```
