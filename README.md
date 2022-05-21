@@ -5,7 +5,28 @@
 
 !MUST DO!
 This script does a lot of rough handling with wiping stuff..
-Update: `nano /usr/local/bin/minerup`
+
+Update: `nano /usr/local/bin/minerup`....
+
+```REGION=`uci get miner.general.region`
+VERSION=`uci get miner.general.version`
+MINER=`uci get miner.general.image`
+SYNC_PEER=`uci get miner.general.syncpeer`
+PORT=`uci get miner.general.port`
+
+## Default Setting
+[[ -z ${REGION} ]] && REGION="US915"
+[[ -z ${VERSION} ]] && VERSION="2022.05.11.0"
+[[ -z ${MINER} ]] && VERSION="miner-arm64_2022.05.11.0"
+[[ -z ${SYNC_PEER} ]] && SYNC_PEER="/ip4/47.89.8.92/tcp/44158"
+[[ -z ${PORT} ]] && PORT="44158"
+
+
+VERSION="miner-arm64_2022.05.19.0_GA"
+VERSION="2022.05.19.0_GA"
+MINER_HOME="/home/miner"
+MINER_DATA="$MINER_HOME/miner_data"
+LOGFILE="$MINER_HOME/miner-manager.log"```
 
 This is likely a big source of frustration with reboot resets.. (pulls update scripts from a repo on boot!)
 `nano /usr/local/bin/draginoups`
