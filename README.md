@@ -18,6 +18,9 @@ quay.io/team-helium/miner:miner-arm64_2022.05.19.0_GA
 This script does a lot of rough handling with wiping stuff..
 Update: `nano /usr/local/bin/minerup`
 
+This is likely a big source of frustration with reboot resets.. (pulls update scripts from a repo on boot!)
+`nano /usr/local/bin/draginoups`
+
 
 Newest ver: https://quay.io/repository/team-helium/miner?tab=tags
 
