@@ -38,6 +38,7 @@ https://wiki.dragino.com/index.php?title=Reset_Factory_Default
 . /lib/init/vars.sh
 . /lib/lsb/init-functions
 . /usr/lib/dragino/dragino-common
+/usr/lib/dragino/dragino-provision <oddd
 ```
 ### Wifi
 After messing for days, asked Dragino, they replied promptly, but with a rando IP address wiki..
@@ -89,4 +90,5 @@ iw wlan0 link
 `nano /etc/systemd/system/multi-user.target.wants/dragino-firstrun-config.service`
 `grep -Ril "HotsPot" /usr/lib/systemd`
 
-
+Edited
+`etc/config/miner` to new version
